@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤰 胎动记录</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🤰 胎动记录</h1>
+            <p class="subtitle">记录宝宝的每一次小动作</p>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-card today">
+                <div class="stat-icon">📅</div>
+                <div class="stat-info">
+                    <div class="stat-label">今日胎动</div>
+                    <div class="stat-value" id="todayCount">0</div>
+                    <div class="stat-sub">次</div>
+                </div>
+            </div>
+            
+            <div class="stat-card session">
+                <div class="stat-icon">⏱️</div>
+                <div class="stat-info">
+                    <div class="stat-label">本次记录</div>
+                    <div class="stat-value" id="sessionCount">0</div>
+                    <div class="stat-sub">次</div>
+                </div>
+            </div>
+
+            <div class="stat-card duration">
+                <div class="stat-icon">⏰</div>
+                <div class="stat-info">
+                    <div class="stat-label">记录时长</div>
+                    <div class="stat-value" id="sessionDuration">00:00</div>
+                    <div class="stat-sub">分钟</div>
+                </div>
+            </div>
+
+            <div class="stat-card average">
+                <div class="stat-icon">📊</div>
+                <div class="stat-info">
+                    <div class="stat-label">平均/小时</div>
+                    <div class="stat-value" id="hourlyAverage">0</div>
+                    <div class="stat-sub">次</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-section">
+            <button id="kickButton" class="kick-button">
+                <span class="kick-icon">👶</span>
+                <span class="kick-text">点击记录胎动</span>
+            </button>
+
+            <div class="control-panel">
+                <button id="startSessionBtn" class="btn btn-start">
+                    <span class="btn-icon">▶️</span> 开始记录
+                </button>
+                <button id="stopSessionBtn" class="btn btn-stop" style="display: none;">
+                    <span class="btn-icon">⏸️</span> 结束记录
+                </button>
+                <button id="resetSessionBtn" class="btn btn-reset">
+                    <span class="btn-icon">🔄</span> 重置本次
+                </button>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <h2 class="section-title">📜 记录历史</h2>
+            <div id="historyList" class="history-list">
+                <!-- 历史记录将在这里动态生成 -->
+            </div>
+            <button id="clearHistoryBtn" class="btn btn-clear">清空历史</button>
+        </div>
+
+        <div class="tips-section">
+            <h2 class="section-title">💡 温馨提示</h2>
+            <div class="tips-list">
+                <div class="tip-item">
+                    <span class="tip-icon">✨</span>
+                    <span class="tip-text">建议每天固定时间记录，如早中晚各一次</span>
+                </div>
+                <div class="tip-item">
+                    <span class="tip-icon">✨</span>
+                    <span class="tip-text">感觉10次胎动大约需要多久，平均应在1-2小时内</span>
+                </div>
+                <div class="tip-item">
+                    <span class="tip-icon">✨</span>
+                    <span class="tip-text">如果胎动明显减少或异常，请及时就医</span>
+                </div>
+                <div class="tip-item">
+                    <span class="tip-icon">✨</span>
+                    <span class="tip-text">宝宝最活跃的时段通常是晚上9-11点</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
