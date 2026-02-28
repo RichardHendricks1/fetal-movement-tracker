@@ -65,10 +65,8 @@ class FetalMovementTracker {
 
     // 记录胎动
     recordKick() {
+        // 如果没有活动会话，自动开始一个新的
         if (!this.activeSession) {
-            if (!confirm('请先开始记录会话')) {
-                return;
-            }
             this.startSession();
         }
 
